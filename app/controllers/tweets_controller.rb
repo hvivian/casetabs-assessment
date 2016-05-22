@@ -2,7 +2,9 @@ class TweetsController < ApplicationController
 
   def index
     user = params[:username] || "casetabs"
-    @tweets = twitter.user_timeline(user).take(20)
+    @tweets = Rails.cache.fetch("#{user}", expires_in: 5.minutes) do
+      twitter.user_timeline(user).take(20)
+    end
     respond_to do |format|
       format.html
       format.json { render json: @tweets }
