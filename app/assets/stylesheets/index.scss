@@ -12,7 +12,7 @@ $screen-md-lg: 922px;
   margin-bottom: 10px;
 }
 
-@media (lg-width: $screen-md-lg) { 
+@media (min-width: $screen-md-lg) { 
   .wrapper {
     max-width: $screen-md-lg;
     margin: 0 auto;
