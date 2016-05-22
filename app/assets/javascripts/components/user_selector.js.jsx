@@ -3,6 +3,7 @@ var UserSelector = React.createClass({
     return { username: "casetabs" };
   },
   update: function() {
+    window.location.hash = "#" + this.state.username;
     this.props.update(this.state.username);
   },
   changeUserName: function(e) {

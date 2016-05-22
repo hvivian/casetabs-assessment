@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   root 'index#index'
 
   get 'tweets' => 'tweets#index'
+  get 'user' => 'tweets#user'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
