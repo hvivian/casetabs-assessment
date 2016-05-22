@@ -1,3 +1,20 @@
 // Place all the styles related to the index controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$screen-md-lg: 922px;
+
+.user h5 {
+  margin-top: 0px;
+}
+
+.tweet.row {
+  margin-bottom: 10px;
+}
+
+@media (lg-width: $screen-md-lg) { 
+  .wrapper {
+    max-width: $screen-md-lg;
+    margin: 0 auto;
+  }
+}
