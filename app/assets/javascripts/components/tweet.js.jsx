@@ -29,11 +29,11 @@ var Tweet = React.createClass({
   render: function() {
     return (
       <div className='tweet row'>
-        <div className="col-sm-4">
+        <div className="col-xs-4">
           <UserInfo user={this.props.tweet.user} />
         </div>
         <div
-          className="col-sm-8"
+          className="col-xs-8"
           dangerouslySetInnerHTML={ this.renderTweetText(this.props.tweet.text)  }>
         </div>
       </div>
